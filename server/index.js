@@ -69,7 +69,7 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL ||"https://task-manager-socket.vercel.app",
+    origin: process.env.FRONTEND_URL ||"https://task-manager-socket-yhj9.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }
@@ -82,7 +82,7 @@ app.use(express.json());
 const io = new Server(server,
   {
   cors: {
-    origin: process.env.FRONTEND_URL || "https://task-manager-socket.vercel.app",
+    origin: process.env.FRONTEND_URL || "https://task-manager-socket-yhj9.onrender.com",
     methods: ["GET", "POST"],
     credentials: true,
   },

@@ -19,7 +19,7 @@ export default function TaskBoard() {
   const [isConnected, setIsConnected] = useState(false);
 
   useEffect(() => {
-    const socketServer = import.meta.env.BACKEND_URL || "https://task-manager-socket.vercel.app";
+    const socketServer = "https://task-manager-socket-yhj9.onrender.com";
     const socketInstance = io(socketServer);
 
     socketInstance.on("connect", () => {
