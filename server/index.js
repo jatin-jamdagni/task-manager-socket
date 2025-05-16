@@ -66,22 +66,26 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.use(
-  cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
+  cors()
 );
+
+// {
+//     origin: process.env.FRONTEND_URL || "http://localhost:3000",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   }
 
 app.use(express.json());
 
-const io = new Server(server, {
-  cors: {
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
-    methods: ["GET", "POST"],
-    credentials: true,
-  },
-});
+const io = new Server(server
+//   {
+//   cors: {
+//     origin: process.env.FRONTEND_URL || "http://localhost:3000",
+//     methods: ["GET", "POST"],
+//     credentials: true,
+//   },
+// }
+);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/dist/index.html"));
