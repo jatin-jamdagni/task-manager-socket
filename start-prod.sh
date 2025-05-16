@@ -9,5 +9,5 @@ echo "Installing server dependencies..."
 cd server
 npm install
 
-# echo "Starting Express server in production..."
-# node index.js
+echo "Starting Express server in production..."
+node index.js
