@@ -1,1 +1,5 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "." }] }
+{
+	"version": 2,
+    "buildCommand": "npm run start",
+	"rewrites": [{ "source": "/(.*)", "destination": "/server" }]
+}
