@@ -5,10 +5,12 @@ import cors from "cors";
 import { v4 as uuidv4 } from "uuid";
 import path from "path";
 import { fileURLToPath } from "url";
-
-const app = express();
+// require('dotenv').config()
+import {config} from "dotenv"
+config()
+ const app = express();
 const server = http.createServer(app);
-
+console.log("this is kye", process.env.FRONTEND_URL)
 let boardData = {
   tasks: {
     "task-1": {
@@ -67,7 +69,7 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+    origin: process.env.FRONTEND_URL ||"https://task-manager-socket.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }
@@ -80,7 +82,7 @@ app.use(express.json());
 const io = new Server(server,
   {
   cors: {
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+    origin: process.env.FRONTEND_URL || "https://task-manager-socket.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   },

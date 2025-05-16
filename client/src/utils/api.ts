@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const base_url = import.meta.env.BACKEND_URL;
+const base_url = import.meta.env.BACKEND_URL ||"https://task-manager-socket.vercel.app";
 
 export const getBoard = async () => {
 
