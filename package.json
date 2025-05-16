@@ -1,0 +1,19 @@
+{
+  "name": "taskmanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./start-prod.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatin-jamdagni/task-manager-socket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jatin-jamdagni/task-manager-socket/issues"
+  },
+  "homepage": "https://github.com/jatin-jamdagni/task-manager-socket#readme"
+}
