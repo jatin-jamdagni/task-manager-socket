@@ -1,5 +1,9 @@
 {
-	"version": 2,
-    "buildCommand": "npm run start",
-	"rewrites": [{ "source": "/(.*)", "destination": "/server" }]
+  "version": 2,
+  "buildCommand": "cd client && npm install && npm run build && cd ../server && npm install",
+  "outputDirectory": "client/dist",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/server/$1" },
+    { "source": "/(.*)", "destination": "/client/$1" }
+  ]
 }
