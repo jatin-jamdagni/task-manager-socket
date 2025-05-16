@@ -4,6 +4,6 @@
   "builds": [{"src": "./server/index.js", "use": "@vercel/node"}],
   "outputDirectory": "client/dist",
   "rewrites": [
-     { "source": "/(.*)", "destination": "./server/index.js" }
+     { "source": "/(.*)", "destination": "./server/" }
   ]
 }
