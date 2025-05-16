@@ -19,7 +19,7 @@ export default function TaskBoard() {
   const [isConnected, setIsConnected] = useState(false);
 
   useEffect(() => {
-    const socketServer = import.meta.env.BACKEND_URL || "http://localhost:3001";
+    const socketServer = import.meta.env.BACKEND_URL;
     const socketInstance = io(socketServer);
 
     socketInstance.on("connect", () => {
