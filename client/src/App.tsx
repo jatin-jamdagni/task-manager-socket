@@ -1,7 +1,12 @@
 import React from "react";
+import TaskBoard from "./components/task-board";
 
 const App: React.FC = () => {
-  return <div className=" text-red-500">App</div>;
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-start p-24">
+      <TaskBoard />
+    </main>
+  );
 };
 
 export default App;
